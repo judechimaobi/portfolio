@@ -14,7 +14,6 @@ import {
     mongodb,
     git,
     figma,
-    docker,
     tectarii,
     trafrica,
     kulvix,

@@ -8,7 +8,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -29,6 +28,7 @@ import php2 from "./tech/php2.png";
 import premiere_pro from "./tech/premiere_pro.png";
 import sql from "./tech/sql.webp";
 import sql2 from "./tech/sql2.png";
+import techstack from "./tech/tech-stack-logos.svg";
 
 import kulvix from "./company/kulvix.png";
 import tectarii from "./company/tectarii.jpg";
@@ -47,6 +47,7 @@ import cryptoip from "./projects/crypto-ip.png";
 import icoplatform from "./projects/ico-platform.jpg";
 import referralplatform from "./projects/referral-platform.png";
 
+
 export {
   logo,
   backend,
@@ -57,7 +58,6 @@ export {
   menu,
   close,
   css,
-  docker,
   figma,
   git,
   html,
@@ -92,4 +92,5 @@ export {
   cryptoip,
   icoplatform,
   referralplatform,
+  techstack,
 };

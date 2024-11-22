@@ -82,51 +82,56 @@ import {
 } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
+import { techstack } from "../../assets";
 
-
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
-
+const Ball = () => {
+ 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={3.75} rotation={[0, 1.2, 0]}>
-        <sphereGeometry args={[1, 32, 32]} />
-        <meshStandardMaterial
-          color={props.color}
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading={false}
-        />
-        <Decal
-          position={[0, 0, 1]}
-          rotation={[0, 0, 0]}
-          scale={1.3}
-          map={decal}
-        />
-      </mesh>
-    </Float>
+      <Float
+        speed={1.75}
+        rotationIntensity={3}
+        floatIntensity={2}
+      >
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[0, 0, 0.05]} />
+        <mesh
+          castShadow
+          receiveShadow
+          scale={5.75}
+          rotation={[0, 1.2, 0]}
+          color='red'
+        >
+          <sphereGeometry args={[1, 42, 42]} />
+          <meshStandardMaterial
+            color='blue'
+            polygonOffset
+            polygonOffsetFactor={-5}
+            flatShading={false}
+          />
+            <Decal
+              position={[0, 0, 1]}
+              rotation={[0, 0, 0]}
+              scale={1.8}
+              map={useTexture(techstack)}
+            />
+        </mesh>
+      </Float>
   );
 };
 
 
 
-const BallCanvas = ({ icon, color }) => {
+const BallCanvas = () => {
   return (
     <Canvas
-      frameloop='demand'
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 35 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls 
-          enableZoom={false}
-        />
-        <Ball imgUrl={icon} color={color} />
+      <Suspense>
+        <OrbitControls enableZoom={false}  />
+        <Ball fallback={<CanvasLoader />} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   )
