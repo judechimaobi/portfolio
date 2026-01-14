@@ -50,6 +50,8 @@
 
 import { motion } from 'framer-motion';
 import TypeWriterEffect from 'react-typewriter-effect';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
@@ -67,6 +69,29 @@ const Hero = () => {
             Hi, I'm <span className='text-[#3867ff]'>Jude</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            <Typewriter
+              words={[
+                'I develop Mobile/Web applications, design creative graphics,',
+              ]}
+              cursor={false}
+              typeSpeed={50}
+              delaySpeed={100}
+            />
+          </p>
+
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            <Typewriter
+              words={[
+                'and create user interfaces.',
+              ]}
+              cursor
+              cursorColor="#3867ff"
+              typeSpeed={50}
+              delaySpeed={8000}
+            />
+          </p>
+
+          {/* <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             <TypeWriterEffect
               textStyle={{
                 fontSize: '1.5rem',
@@ -99,7 +124,7 @@ const Hero = () => {
               typeSpeed={50}
               hideCursorAfterText={true}
             />
-          </p>
+          </p> */}
         </div>
       </div>
 
