@@ -21,7 +21,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import indesign from "./tech/indesign.png";
 import capcut from "./tech/capcut.png";
-import Illustrator from "./tech/Illustrator.png";
+import Illustrator from "./tech/illustrator.png";
 import photoshop from "./tech/photoshop.png";
 import php from "./tech/php.png";
 import php2 from "./tech/php2.png";
